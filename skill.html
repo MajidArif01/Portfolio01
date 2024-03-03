@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('web1.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation styles */
+        .navbar {
+            background-color: #333; 
+            padding: 15px; 
+            position: fixed;
+            top: 0; 
+            width: 100%; 
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            z-index: 1000; 
+        }
+
+        .navbar img {
+            height: 40px; 
+        }
+
+        .navbar-links {
+            margin-left: auto; 
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 20px; 
+        }
+
+        .navbar a:hover {
+            color: #ff8c00; /* Change color on hover */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav a.active {
+            font-weight: bold;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .skill-container {
+            width: 48%; 
+            margin-bottom: 20px;
+        }
+
+        .skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .progress {
+            height: 10px;
+            background-color: #2ecc71; 
+            transition: width 0.5s ease;
+            margin-bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        .circle-progress {
+            width: 100px;
+            height: 100px;
+            background: conic-gradient(#2ecc71 0% 50%, #f9f9f9 50% 100%);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            font-size: 20px;
+            color: #2ecc71;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="majid.jpg" alt="Logo">
+        <div class="navbar-links">
+            <a href="home.html">Home</a>
+            <a href="skill.html">Skills</a>
+            <a href="services.html">Services</a>
+            <a href="index.html">Contact</a>
+        </div>
+    </div>
+
+    <section class="skills">
+        <div class="skill-container">
+            <h2>Technical Skills</h2>
+            <div class="skill">
+                <span>C++</span>
+                <div class="progress" style="width: 85%;">85%</div>
+            </div>
+            <div class="skill">
+                <span>Python</span>
+                <div class="progress" style="width: 90%;">90%</div>
+            </div>
+            <div class="skill">
+                <span>Wordpress</span>
+                <div class="progress" style="width: 80%;">80%</div>
+            </div>
+            <div class="skill">
+                <span>Figma</span>
+                <div class="progress" style="width: 75%;">75%</div>
+            </div>
+            <div class="skill">
+                <span>HTML5</span>
+                <div class="progress" style="width: 95%;">95%</div>
+            </div>
+            <div class="skill">
+                <span>CSS3</span>
+                <div class="progress" style="width: 90%;">90%</div>
+            </div>
+            <div class="skill">
+                <span>JS</span>
+                <div class="progress" style="width: 80%;">80%</div>
+            </div>
+            <div class="skill">
+                <span>jQuery</span>
+                <div class="progress" style="width: 85%;">85%</div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <h2>Professional Skills</h2>
+            <div class="skill">
+                <div class="circle-progress">95%</div>
+                <div class="skill-name">Communication</div>
+            </div>
+            <div class="skill">
+                <div class="circle-progress">80%</div>
+                <div class="skill-name">Problem Solving</div>
+            </div>
+            <div class="skill">
+                <div class="circle-progress">90%</div>
+                <div class="skill-name">Project Completion</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 My Portfolio</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        const menuItems = document.querySelectorAll('.navbar a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menuItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

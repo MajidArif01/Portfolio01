@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Homepage</title>
+    <style>
+        body {
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('img3.jpg') no-repeat center center fixed;
+            background-size: cover;
+            padding-top: 70px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            padding-top: 120px;
+        }
+
+        .image-card {
+            flex: 1;
+            padding: 20px;
+            background-color: #302d2d;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .introduction {
+            flex: 1;
+            padding: 20px;
+            background-color: #eee6e6;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .introduction p {
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #000000;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .navbar img {
+            height: 40px;
+        }
+
+        .navbar-links {
+            margin-left: auto;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 20px;
+        }
+
+        .navbar a:hover {
+            color: #ff8c00;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="majid.jpg" alt="Logo">
+        <div class="navbar-links">
+            <a href="home.html">Home</a>
+
+            <a href="skill.html">skills</a>
+
+            <a href="services.html">services</a>
+
+            <a href="index.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="image-card">
+            <img src="majid.jpg" alt="Captivating Image" style="width: 100%; height: auto;">
+        </div>
+        <div class="introduction">
+            <h1>Meet Majid Arif</h1>
+            <p>
+                Hello, I'm Majid, a proficient web developer and UI/UX designer with expertise in C++ and Python. I specialize in creating seamless and visually appealing digital experiences. My passion extends to exploring machine learning and deep learning technologies. I thrive in dynamic environments, delivering high-quality solutions that blend technical precision with creative design. Let's connect and explore innovative possibilities in technology.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
